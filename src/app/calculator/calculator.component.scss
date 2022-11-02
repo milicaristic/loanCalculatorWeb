@@ -1,0 +1,178 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+.container, body, html{
+  background-color: #F68D65;
+}
+
+h1{
+  color: white;
+}
+
+.btn{
+  background-color: #7B6DB1;
+  color: white;
+  font-weight: bold;
+}
+
+.calculator-item h2{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.bl_form {
+  margin: 30px 0 0;
+}
+
+.bl_form input {
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 4px 0px rgba(0,0,0,0.2);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.lb_wrap .lb_label.top, .lb_wrap .lb_label.bottom {
+  left: 66px !important;
+}
+
+.lb_wrap .lb_label.left {
+  left: 0;
+}
+
+.lb_label {
+  font-size:18px;
+  line-height:32px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.no-placeholder .lb_label {
+  display:none;
+}
+
+.lb_label.active {
+  color: #aaa;
+}
+
+#Highlighted-form .form-group label{
+  display:none;
+  font-size:18px;
+  line-height:24px;
+  font-weight:100;
+  text-transform:uppercase;
+}
+
+#Highlighted-form.no-placeholder .form-group label{
+  display:block;
+  align-content: center;
+}
+
+#Highlighted-form .controls {
+  padding:0;
+  margin-top:40px;
+}
+
+#Highlighted-form.no-placeholder .controls {
+  margin-top:0;
+}
+
+#Highlighted-form .form-control {
+  display:inline;
+  background:#fff;
+  border:none;
+  border-radius:5px;
+  outline:none;
+  box-shadow:0 4px 0 rgba(0,0,0,0.05);
+  height:52px;
+  font-size:18px;
+  line-height:32px;
+  color:#aaa;
+  font-weight:400;
+  //padding-left:64px;
+  vertical-align:top;
+}
+
+#Highlighted-form .form-group.half-width{
+  width:40%;
+  float:left;
+}
+
+#Highlighted-form .form-group{
+  position:relative;
+}
+
+#Highlighted-form .form-group [class*=fa] {
+  display:block;
+  width:64px;
+  position:absolute;
+  top:0;
+  left:5px;
+  color:#eee;
+  font-size:24px;
+  line-height:52px;
+  text-align:center;
+  font-weight:300;
+  -webkit-transition:color .3s ease-out;
+  transition:color .3s ease-out;
+}
+
+#Highlighted-form .form-group [class*=fa].active{
+  color:#ccc;
+}
+
+#Highlighted-form.no-placeholder .form-group [class*=fa]{
+  top:30px;
+}
+
+#Highlighted-form textarea.form-control {
+  height:auto;
+  max-width:100%;
+  min-width:100%;
+  font-size:18px;
+  font-weight:400;
+  line-height:24px;
+  padding-top:14px;
+  vertical-align:top;
+}
+
+#Highlighted-form .form-control:focus {
+  outline:none;
+  box-shadow:0 4px 0 rgba(0,0,0,0.05);
+}
+
+#Highlighted-form .error-message {
+  padding:5px 0;
+  position:absolute;
+  top:-35px;
+  right:0;
+  font-size:15px;
+  line-height:24px;
+  font-weight:400;
+  color:#ff3345;
+  z-index:10;
+}
+
+#Highlighted-form.no-placeholder .error-message {
+  top:0;
+}
+.container{
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  .row{
+    text-align: center;
+    justify-content: center;
+    height: 700px;
+  }
+}
+.container, body, html{
+  background-color: #F68D65;
+}
+
+
+

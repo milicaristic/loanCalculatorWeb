@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container bootstrap snippets bootdey">
+  <section id="calculator" class="gray-bg padding-top-bottom">
+    <div class="container bootstrap snippets bootdey">
+      <h1>Loan Calculator</h1>
+      <div class="row">
+
+        <form id="Highlighted-form" class="col-sm-6 col-sm-offset-3" action="???" method="post" novalidate="">
+
+          <div class="form-group">
+            <label class="control-label" for="calculator-amount">Loan Amount</label>
+            <div class="controls">
+              <input id="calculator-amount" name="calculatorAmount" placeholder="Loan amount"
+                     class="form-control requiredField Highlighted-label"
+                     data-new-placeholder="Loan amount" type="text" data-error-empty="Please enter loan amount">
+            </div>
+          </div><!-- End loan amount input -->
+
+          <div class="form-group">
+            <label class="control-label" for="calculator-interestRate">Interest Rate</label>
+            <div class=" controls">
+              <input id="calculator-interestRate" name="interestRate" placeholder="Interest Rate"
+                     class="form-control requiredField Highlighted-label"
+                     data-new-placeholder="Interest Rate"
+                     type="text" data-error-empty="Please enter interest rate" data-error-invalid="Invalid interest rate input">
+            </div>
+          </div><!-- End Interest Rate input -->
+
+          <div class="form-group">
+            <label class="control-label" for="calculator-loanTerm">Loan Term months</label>
+            <div class=" controls">
+              <input id="calculator-loanTerm" name="loanTerm" placeholder="Loan Term"
+                     class="form-control requiredField Highlighted-label" data-new-placeholder="Loan Term"
+                     type="text" data-error-empty="Please enter loan term" data-error-invalid="Invalid loan term input">
+            </div>
+          </div><!-- End Loan Term input -->
+
+          <p><button name="submit" type="submit" class="btn btn-block" data-error-message="Error!"
+                     data-sending-message="Calculating..."
+                     data-ok-message="Calculated">
+            Calculate
+          </button></p>
+          <input type="hidden" name="submitted" id="submitted" value="true">
+        </form><!-- End Highlighted-form -->
+      </div>
+    </div>
+  </section>
+</div>
