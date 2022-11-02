@@ -9,8 +9,8 @@
               class="col-sm-6 col-sm-offset-3" method="post" novalidate="" (ngSubmit)="onSubmit(loanCalculationPost)">
 
           <div class="form-group">
-            <label class="control-label" for="calculator-amount">Loan Amount</label>
             <div class="controls">
+              <label for="calculator-amount">Loan Amount</label><br>
               <input required id="calculator-amount" name="loanAmount" placeholder="Loan amount"
                      class="form-control requiredField Highlighted-label"
                      data-new-placeholder="Loan amount" type="text" data-error-empty="Please enter loan amount" ngModel>
@@ -43,7 +43,11 @@
           </button></p>
           <input type="hidden" name="submitted" id="submitted" value="true">
 <!--          <div *ngIf="this.calculated">Loan term:</div>-->
-          <div *ngIf="this.calculated">MOnthly p: {{this.calculation.monthlyPayment}}</div>
+          <div *ngIf="this.calculated" class="calculation">
+            <div class="monthlyPayment">Monthly payment: $ {{this.calculation.monthlyPayment}}</div>
+            <div class="totalInterestPaid">Total Interest Paid: $ {{this.calculation.totalInterestPaid}}</div>
+          </div>
+
         </form>
         <!-- End Highlighted-form -->
 <!--        <div *ngIf="calculated">-->

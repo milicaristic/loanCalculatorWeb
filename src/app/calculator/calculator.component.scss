@@ -173,6 +173,16 @@ h1{
 .container, body, html {
   background-color: #F68D65;
 }
+.calculation{
+  border: 2px solid #836DB1;
+  border-radius: 5px;
+  color: white;
+  background-color: #F9BAB5;
+  font-size: 20px;
+  .monthlyPayment .totalInterestPaid{
+    float: left;
+  }
+}
 
 
 
