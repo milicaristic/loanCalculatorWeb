@@ -5,43 +5,56 @@
       <h1>Loan Calculator</h1>
       <div class="row">
 
-        <form id="Highlighted-form" class="col-sm-6 col-sm-offset-3" action="???" method="post" novalidate="">
+        <form #loanCalculationPost="ngForm" id="Highlighted-form"
+              class="col-sm-6 col-sm-offset-3" method="post" novalidate="" (ngSubmit)="onSubmit(loanCalculationPost)">
 
           <div class="form-group">
             <label class="control-label" for="calculator-amount">Loan Amount</label>
             <div class="controls">
-              <input id="calculator-amount" name="calculatorAmount" placeholder="Loan amount"
+              <input required id="calculator-amount" name="loanAmount" placeholder="Loan amount"
                      class="form-control requiredField Highlighted-label"
-                     data-new-placeholder="Loan amount" type="text" data-error-empty="Please enter loan amount">
+                     data-new-placeholder="Loan amount" type="text" data-error-empty="Please enter loan amount" ngModel>
             </div>
           </div><!-- End loan amount input -->
 
           <div class="form-group">
             <label class="control-label" for="calculator-interestRate">Interest Rate</label>
             <div class=" controls">
-              <input id="calculator-interestRate" name="interestRate" placeholder="Interest Rate"
+              <input required id="calculator-interestRate" name="interestRate" placeholder="Interest Rate"
                      class="form-control requiredField Highlighted-label"
                      data-new-placeholder="Interest Rate"
-                     type="text" data-error-empty="Please enter interest rate" data-error-invalid="Invalid interest rate input">
+                     type="text" data-error-empty="Please enter interest rate" data-error-invalid="Invalid interest rate input" ngModel>
             </div>
           </div><!-- End Interest Rate input -->
 
           <div class="form-group">
             <label class="control-label" for="calculator-loanTerm">Loan Term months</label>
             <div class=" controls">
-              <input id="calculator-loanTerm" name="loanTerm" placeholder="Loan Term"
+              <input required id="calculator-loanTerm" name="loanTerm" placeholder="Loan Term"
                      class="form-control requiredField Highlighted-label" data-new-placeholder="Loan Term"
-                     type="text" data-error-empty="Please enter loan term" data-error-invalid="Invalid loan term input">
+                     type="text" data-error-empty="Please enter loan term" data-error-invalid="Invalid loan term input" ngModel>
             </div>
           </div><!-- End Loan Term input -->
 
-          <p><button name="submit" type="submit" class="btn btn-block" data-error-message="Error!"
+          <p><button [disabled]="!loanCalculationPost.valid" name="submit" type="submit" class="btn btn-block" data-error-message="Error!"
                      data-sending-message="Calculating..."
                      data-ok-message="Calculated">
             Calculate
           </button></p>
           <input type="hidden" name="submitted" id="submitted" value="true">
-        </form><!-- End Highlighted-form -->
+<!--          <div *ngIf="this.calculated">Loan term:</div>-->
+          <div *ngIf="this.calculated">MOnthly p: {{this.calculation.monthlyPayment}}</div>
+        </form>
+        <!-- End Highlighted-form -->
+<!--        <div *ngIf="calculated">-->
+<!--          monthly payment:-->
+<!--          {{calculation.monthlyPayment}}-->
+<!--          total interest paid:-->
+<!--          {{calculation.totalInterestPaid}}-->
+<!--        </div>-->
+      </div>
+      <div *ngFor="let lr of this.loanRequests">
+        loan term: {{lr.loanTerm}}
       </div>
     </div>
   </section>
