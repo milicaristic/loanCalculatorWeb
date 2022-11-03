@@ -8,7 +8,10 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from "@angular/forms";
 import {CommonModule} from '@angular/common';
 import { AmortizationScheduleComponent } from './amortization-schedule/amortization-schedule.component';
-
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from "@angular/material/select";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,11 @@ import { AmortizationScheduleComponent } from './amortization-schedule/amortizat
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

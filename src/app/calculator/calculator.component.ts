@@ -17,7 +17,10 @@ export class CalculatorComponent implements OnInit {
   public loanRequest: LoanRequest;
   public loanRequests: LoanRequest[];
   public calculation: Calculation;
-  public amortizationSchedule: AmortizationSchedule[];
+  public loanTermTypes: string[]=["year", "month"];
+  public loanTermType: string="year";
+
+
 
   public calculated: boolean = false;
 
@@ -29,6 +32,11 @@ export class CalculatorComponent implements OnInit {
   }
 
   onSubmit(data) {
+    if(this.loanTermType === "year"){
+      let lr = this.convertToMonth(data.value);
+      data.setValue(lr);
+    }
+    console.warn("data=",this.loanRequest);
     if (data != null) {
       this.addLoanRequest(data.value);
     }
@@ -66,4 +74,11 @@ export class CalculatorComponent implements OnInit {
     );
   }
 
+  private convertToMonth(loanRequest: LoanRequest) {
+
+    console.log("loanRequest",loanRequest);
+    loanRequest.loanTerm = loanRequest.loanTerm * 12;
+    console.log("convertToMonth,  months= ", loanRequest.loanTerm);
+    return loanRequest;
+  }
 }

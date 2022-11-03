@@ -28,7 +28,7 @@
             </div>
           </div><!-- End Interest Rate input -->
 
-          <div class="form-group">
+          <div class="form-group loanTerm">
             <label class="control-label" for="calculator-loanTerm">Loan Term</label>
             <div class=" controls">
               <input required id="calculator-loanTerm" name="loanTerm" placeholder="Enter loan term"
@@ -36,8 +36,20 @@
                      type="text" data-error-empty="Please enter loan term" data-error-invalid="Invalid loan term input"
                      ngModel>
             </div>
-          </div><!-- End Loan Term input -->
+            <div class="dropdownDiv">
+            <mat-form-field appearance="fill" class="dropdown">
+              <mat-label>year</mat-label>
+              <mat-select [(value)] = "loanTermType">
+                <mat-option *ngFor="let termType of loanTermTypes" value="{{termType}}">
+                  {{termType}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            </div>
 
+
+          </div><!-- End Loan Term input -->
+          <div class="btnDiv">
           <p>
             <button [disabled]="!loanCalculationPost.valid" name="submit" type="submit" class="btn btn-block"
                     data-error-message="Error!"
@@ -46,12 +58,12 @@
               Calculate
             </button>
           </p>
+          </div>
           <input type="hidden" name="submitted" id="submitted" value="true">
           <!--          <div *ngIf="this.calculated">Loan term:</div>-->
           <div *ngIf="this.calculated" class="calculation">
             <div class="monthlyPayment">Monthly payment: $ {{this.calculation.monthlyPayment}}</div>
             <div class="totalInterestPaid">Total Interest Paid: $ {{this.calculation.totalInterestPaid}}</div>
-
           </div>
 
           <div *ngIf="this.calculated">
@@ -61,16 +73,6 @@
           </div>
 
         </form>
-        <!-- End Highlighted-form -->
-        <!--        <div *ngIf="calculated">-->
-        <!--          monthly payment:-->
-        <!--          {{calculation.monthlyPayment}}-->
-        <!--          total interest paid:-->
-        <!--          {{calculation.totalInterestPaid}}-->
-        <!--        </div>-->
-      </div>
-      <div *ngFor="let lr of this.loanRequests">
-        loan term: {{lr.loanTerm}}
       </div>
     </div>
   </section>
