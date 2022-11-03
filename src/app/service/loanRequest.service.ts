@@ -16,6 +16,10 @@ export class LoanRequestService {
     return this.http.get<LoanRequest[]>(`${this.apiServiceUrl}/loanRequest/all`);
   }
 
+  public getLoanRequestById(id: number): Observable<LoanRequest>{
+    return this.http.get<LoanRequest>(`${this.apiServiceUrl}/loanRequest/find/${id}`);
+  }
+
   public addLoanRequest(loanRequest: LoanRequest): Observable<LoanRequest>{
     return this.http.post<LoanRequest>(`${this.apiServiceUrl}/main/add`, loanRequest);
   }

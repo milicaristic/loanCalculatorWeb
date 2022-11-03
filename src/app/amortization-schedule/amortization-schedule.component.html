@@ -1,0 +1,31 @@
+<div class="mainContainer">
+  <div class="row container">
+    <div><h1>Amortization Schedule</h1></div>
+    <div>
+      <div class="text">
+        ${{this.loanRequest.loanAmount}} at {{this.loanRequest.interestRate}}% interest<br>
+        with {{this.loanRequest.loanTerm}} monthly payments <br>
+        Total Payments: ${{this.loanRequest.loanAmount + this.calculation.totalInterestPaid}}<br>
+        Total Interest: $ {{this.calculation.totalInterestPaid}}
+      </div>
+    </div>
+    <div class="tableDiv">
+      <table>
+        <tr>
+          <th>Month</th>
+          <th>Payment Amount</th>
+          <th>Principal Amount</th>
+          <th>Interest Amount</th>
+          <th>Balance Owned</th>
+        </tr>
+        <tr *ngFor="let row of amortizationSchedule">
+          <td>{{row.month}}</td>
+          <td>{{row.paymentAmount}}</td>
+          <td>{{row.principalAmount}}</td>
+          <td>{{row.interestAmount}}</td>
+          <td>{{row.balanceOwned}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

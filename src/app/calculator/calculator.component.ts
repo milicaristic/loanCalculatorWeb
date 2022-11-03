@@ -53,35 +53,12 @@ export class CalculatorComponent implements OnInit {
 
   }
 
-  public getLoanRequests(): void {
-    this.loanRequestService.getLoanRequests().subscribe(
-      (response: LoanRequest[]) => {
-        this.loanRequests = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-
   public getCalculation(id: number): void {
     this.calculationService.getCalculationByLoanRequestId(id).subscribe(
       (response: Calculation) => {
         this.calculation = response;
-        if (this.loanRequest != null)
-          this.calculated = true;
-        this.getAmortizationSchedule(this.calculation.id);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-
-  public getAmortizationSchedule(id: number): void {
-    this.amortizationScheduleService.getAmortizationScheduleByCalculationId(id).subscribe(
-      (response: AmortizationSchedule[]) => {
-        this.amortizationSchedule = response;
+        //this.getAmortizationSchedule(this.calculation.id);
+        this.calculated = true;
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

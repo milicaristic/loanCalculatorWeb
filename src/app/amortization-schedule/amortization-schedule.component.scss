@@ -1,0 +1,55 @@
+body{
+  align-content: center;
+  justify-content: center;
+  text-align:center;
+}
+
+.container{
+  align-content: center;
+  justify-content: center;
+  text-align:center;
+  display:inline-block;
+  font-family: Calibri, serif;
+  font-size: 18px;
+}
+table, th, td {
+  border: 1px solid #836DB1;
+  border-collapse: collapse;
+  background-color: antiquewhite;
+  align-content: center;
+  justify-content: center;
+  text-align:center;
+}
+
+tr:hover{
+  cursor: pointer;
+  color: #836DB1;
+}
+
+th{
+  padding: 3px;
+  background-color: #F68D65;
+  color: white;
+
+}
+
+.tableDiv{
+  align-content: center;
+  justify-content: center;
+  text-align:center;
+}
+
+table tr:nth-of-type(13n) td {
+  border-bottom: 4px solid #836DB1;
+}
+
+h1{
+  left:0;
+  color: #F68D65;
+  margin-bottom: 0;
+}
+
+.text{
+  padding:15px;
+  font-size: 20px;
+}

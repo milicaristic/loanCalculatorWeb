@@ -7,11 +7,14 @@ import {HttpClientModule} from "@angular/common/http";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from "@angular/forms";
 import {CommonModule} from '@angular/common';
+import { AmortizationScheduleComponent } from './amortization-schedule/amortization-schedule.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    AmortizationScheduleComponent,
   ],
   imports: [
     BrowserModule,

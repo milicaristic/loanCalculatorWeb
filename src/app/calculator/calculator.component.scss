@@ -60,25 +60,19 @@ h1{
 }
 
 #Highlighted-form .form-group label{
-  display:none;
+  float: left;
+  color: white;
   font-size:18px;
   line-height:24px;
-  font-weight:100;
-  text-transform:uppercase;
+  font-weight:normal;
 }
 
 #Highlighted-form.no-placeholder .form-group label{
   display:block;
-  align-content: center;
 }
 
 #Highlighted-form .controls {
-  padding:0;
-  margin-top:40px;
-}
-
-#Highlighted-form.no-placeholder .controls {
-  margin-top:0;
+  margin-top:30px;
 }
 
 #Highlighted-form .form-control {
@@ -93,7 +87,6 @@ h1{
   line-height:32px;
   color:#aaa;
   font-weight:400;
-  //padding-left:64px;
   vertical-align:top;
 }
 
@@ -167,7 +160,7 @@ h1{
   .row{
     text-align: center;
     justify-content: center;
-    height: 500px;
+    height: 720px;
   }
 }
 .container, body, html {
@@ -176,7 +169,7 @@ h1{
 .calculation{
   border: 2px solid #836DB1;
   border-radius: 5px;
-  color: white;
+  color:  #836DB1;
   background-color: #F9BAB5;
   font-size: 20px;
   .monthlyPayment .totalInterestPaid{
@@ -184,5 +177,8 @@ h1{
   }
 }
 
-
+h4{
+  float: left;
+  color: white;
+}
 
